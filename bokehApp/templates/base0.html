@@ -1,0 +1,52 @@
+<html>
+<head>	
+	<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	{% block css %}
+	{% endblock %}    
+</head>
+<body>
+	<ul id="navbar">
+		<li><a class="active" href="{% url "enterprise" %}">Enterprises Analysic</a></li>
+		<li><a href="{% url "industry" %}">Industry Info</a></li>			
+		<li><a href="{% url "macro" %}">Macro Economic</a></li>
+		<li><a href="{% url "ratings" %}">Ratings Info</a></li>
+		<li><a href="{% url "other" %}">Other Analysis</a></li>		
+	</ul>
+	
+	<div class="container">
+		
+		{ % block content % }
+
+		{ % endblock %}
+
+	</div>
+	
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script>
+	window.onscroll = function() {myFunction()};
+	
+	var navbar = document.getElementById("navbar");
+	var sticky = navbar.offsetTop;
+	
+	function myFunction() {
+	  if (window.pageYOffset >= sticky) {
+		navbar.classList.add("sticky")
+	  } else {
+		navbar.classList.remove("sticky");
+		// location.reload();
+	  }
+	}    
+
+</script>
+
+
+{% block script %}
+
+{% endblock %}
+
+<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+</html>

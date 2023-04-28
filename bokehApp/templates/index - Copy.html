@@ -1,0 +1,80 @@
+<!-- index.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Searh Info!</h1>
+<!-- Form -->
+<form id="form">
+    <!-- Full Name -->
+    <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Full name" required minlength="3" maxlength="100">
+    </div>
+
+    <!-- Phone number -->
+    <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="555-555-5555" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+    </div>
+
+    <!-- Email address -->
+    <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="email@address.com" required>
+    </div>
+
+    <!-- Website URL -->
+    <div class="form-group">
+        <label for="website">Website URL</label>
+        <input type="url" id="website" name="website" placeholder="https://jacinto.design" required>
+    </div>
+
+    <!-- Password -->
+    <div class="form-group">
+        <label for="password1">Password</label>
+        <input type="password" id="password1" placeholder="Create password (Min. 8 Characters" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" title="Please include at least 1 uppercase character, 1 lower character, and 1 number">
+    </div>
+    
+    <!-- Confirm Password -->
+    <div class="form-group">
+        <label for="password2">Confirm Password</label>
+        <input type="password" id="password2" name="password" placeholder="Confirm password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$">
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+<!-- Erroe/Success Message -->
+<div class="message-container">
+    <h3 id="message">Don't Hesitate!</h3>
+</div>
+
+<h2 class="text-center"><u>Data Calculation</u></h2><br>            
+  
+<div class="vn-blue" style="text-align: center;">
+  <a href="#" class="btn-wrap" id="link">DOWNLOAD</a>
+</div>
+{% endblock %}      				
+
+
+
+
+{% block script %}
+<script>
+  $(document).ready(function() {
+      $("td.contribution").each(function() { $(this).html(parseFloat($(this).text()).toLocaleString())})      
+  })
+</script>
+<script>
+  $(document).ready(function () {
+    $("#link").click(function (e) {
+      e.preventDefault();
+              alert('HI')
+      
+      window.location.href
+        = "realpython.xlsx";
+    });
+  });
+</script>
+{% endblock %}
+                    

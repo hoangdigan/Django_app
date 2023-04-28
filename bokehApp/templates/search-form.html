@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Enterprise Infomation Form</title>
+  <link rel="stylesheet" href="search_form.css">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-1ZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9s+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="searh-form.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="title">Search Info Form
+    </div>
+    <form action="POST" data-netlify="true">
+      <div class="form">
+
+        <div class="inputfield">
+          <label>Company Name</label>
+          <input type="text" class="input" id="name" name="fname" placeholder="Enter company name" maxlength="30"
+            pattern="[A-Za-z]{1,32}" title="Enter company name" required>
+        </div>
+
+        <div class="inputfield">
+          <label>Stock Code</label>
+          <input type="text" class="input" id="name" name="lname" placeholder="Enter stock code" maxlength="30"
+            pattern="[A-Za-z]{1,32}" title="Enter stock code" required>
+        </div>
+        
+
+        <div class="inputfield">
+          <label for="">Company Code</label>
+          <input type="text" class="input" name="age" placeholder="Enter Company Code" maxlength="2" pattern="^[0-9]{2}$"
+            required title="Enter company code">
+        </div>
+
+        <div class="inputfield">
+          <label>From Year</label>
+          <input type="Number" class="input" name="from-year" maxlength="4"
+            pattern="^[0-9]{6}$" required>
+        </div>
+
+        <div class="inputfield">
+          <label>To Year</label>
+          <input type="Number" class="input" name="to-year" maxlength="4"
+            pattern="^[0-9]{6}$" required>
+        </div>
+
+        <div class="inputfield" id="hobbies" >
+          <label for="">Periods</label>
+          <div class="hobbies" >
+            <input type="checkbox" name="Hobbies" id="" value="Music">
+            <label for="" class="checkbox-label">Year</label>
+            <input type="checkbox" name="Hobbies" id="" value="Movies">
+            <label for="" class="checkbox-label">Quarter</label>
+            <input type="checkbox" name="Hobbies" id="" value="Sports">
+            <label for="" class="checkbox-label">Month</label>
+           
+          </div>
+        </div>
+
+       
+
+        <div class="inputfield terms">         
+          <p style="text-align: center">Your request available to download!</p>
+        </div>
+
+        <div class="inputfield" required>
+          <div data-netlify-recaptcha="true"></div>
+        </div>
+
+        <div class="inputfield btns" id="btn">
+          <button type="submit" value="Register" class="btn" onclick="checkPassword()">Submit</button>
+          <button type="reset" value="Reset" class="btn">Reset</button>
+        </div>
+
+      </div>
+    </form>
+    <div class="vn-teal" style="text-align: center;">
+      <a href="#" class="btn-wrap" id="link">DOWNLOAD</a>
+    </div>
+  </div>
+
+</body>
+
+</html>
